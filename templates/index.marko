@@ -1,0 +1,43 @@
+<html>
+
+<head>
+</head>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-top: 10%;
+    align-items: center;
+    height: 18%;
+
+  }
+
+  .details {
+    text-align: center;
+  }
+
+  img {
+    max-width: 100px;
+  }
+
+  p {
+    font-family: monospace;
+    font-size: 18px;
+  }
+</style>
+
+<body>
+  <div class="logo">
+    <img src="/public/images/space.png">
+  </div>
+  <div class="details">
+    <p>HOSTNAME : ${input.hostname}</p>
+    <p>Public IP : ${input.ip}</p>
+  </div>
+</body>
+
+</html>

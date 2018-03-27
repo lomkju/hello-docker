@@ -1,0 +1,12 @@
+{
+  "name": "hello-docker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Arjun Hemrajani <lomkju@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "marko": "^4.9.3"
+  }
+}
