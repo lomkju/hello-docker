@@ -1,0 +1,10 @@
+dist: trusty
+sudo: false
+
+jobs:
+  include:
+    - stage: Build and push docker image
+      script:
+      - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+      - docker build -t $DOCKER_USERNAME/hello-world .
+      - docker push $DOCKER_USERNAME/hello-world
