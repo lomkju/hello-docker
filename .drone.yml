@@ -1,0 +1,12 @@
+kind: pipeline
+name: production
+
+steps:
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: foo/bar
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
