@@ -1,0 +1,27 @@
+kind: DaemonSet
+apiVersion: apps/v1
+metadata:
+  name: hello-docker
+  labels:
+    app: hello-docker
+spec:
+  selector:
+    matchLabels:
+      app: hello-docker
+  template:
+    metadata:
+      name: hello-docker
+      labels:
+        app: hello-docker
+    spec:
+      containers:
+      - name: hello-docker
+        image: lomkju/alpinewithtools
+        volumeMounts:
+        - mountPath: /rootdir
+          name: root
+      volumes:
+      - name: root
+        hostPath:
+         path: /
+      terminationGracePeriodSeconds: 30
